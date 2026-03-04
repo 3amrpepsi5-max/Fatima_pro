@@ -1,0 +1,235 @@
+/* =====================================================
+   dr-fatima/css/animations.css
+   جميع التحريكات والمؤثرات البصرية
+   ===================================================== */
+
+/* ── الظهور عند التحميل ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25%       { transform: scale(1.12); }
+  50%       { transform: scale(1); }
+  75%       { transform: scale(1.06); }
+}
+
+/* ── كلاسات التحريك ── */
+.anim-fade-up   { animation: fadeInUp   0.7s ease forwards; }
+.anim-fade-down { animation: fadeInDown 0.7s ease forwards; }
+.anim-scale-in  { animation: scaleIn    0.6s ease forwards; }
+.anim-float     { animation: float 4s ease-in-out infinite; }
+.anim-heartbeat { animation: heartbeat 2.5s ease-in-out infinite; }
+
+/* ── التأخيرات ── */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+.delay-7 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 0.8s; }
+
+/* ── ظهور عند التمرير (Scroll Reveal) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── تحريك العداد ── */
+.counter-value {
+  display: inline-block;
+  transition: all 0.1s ease;
+}
+
+/* ── تأثير shimmer للبطاقات ── */
+.shimmer-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 100%
+  );
+  transition: left 0.7s ease;
+}
+
+.shimmer-card:hover::after {
+  left: 150%;
+}
+
+/* ── تحريك الأيقونات ── */
+.icon-bounce {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.icon-bounce:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+/* ── Loading Spinner ── */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(196,133,106,0.2);
+  border-top-color: var(--rose);
+  border-radius: 50%;
+  animation: spin-slow 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+/* ── تأثير النبض للإحصاءات ── */
+.stat-pulse {
+  position: relative;
+}
+
+.stat-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+  border: 2px solid currentColor;
+  opacity: 0;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* ── Skeleton Loading ── */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* ── تأثير التحديد في نموذج الحجز ── */
+.form-control:focus {
+  animation: fadeInDown 0.2s ease;
+}
+
+/* ── Hero animations ── */
+.hero-text .badge    { animation: fadeInDown 0.6s ease 0.1s both; }
+.hero-text h1        { animation: fadeInUp   0.7s ease 0.2s both; }
+.hero-text .hero-subtitle { animation: fadeInUp 0.7s ease 0.3s both; }
+.hero-text .hero-stats    { animation: fadeInUp 0.7s ease 0.4s both; }
+.hero-text .hero-actions  { animation: fadeInUp 0.7s ease 0.5s both; }
+.hero-image-wrapper  { animation: scaleIn    0.8s ease 0.3s both; }
+.hero-badge-float.badge-1 { animation: fadeInRight 0.7s ease 0.7s both; }
+.hero-badge-float.badge-2 { animation: fadeInLeft  0.7s ease 0.8s both; }
+
+/* ── Tab switch animation ── */
+.tab-content {
+  animation: fadeInUp 0.4s ease;
+}
+
+/* ── Card hover 3D effect ── */
+.card-3d {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.card-3d:hover {
+  transform: translateY(-8px) rotateX(2deg);
+  box-shadow: 0 24px 60px rgba(13,31,60,0.15);
+}
+
+/* ── نبض زر الواتساب ── */
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25D366;
+  animation: pulse-ring 2s ease-out infinite;
+}

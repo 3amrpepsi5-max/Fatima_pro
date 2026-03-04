@@ -1,0 +1,37 @@
+{
+  "name": "عيادة د. فاطمة صلاح عاشور",
+  "short_name": "عيادة فاطمة",
+  "description": "عيادة أمراض النساء والتوليد - الدكتورة فاطمة صلاح عاشور - المنيا",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#faf6f1",
+  "theme_color": "#c4856a",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["medical", "health"],
+  "shortcuts": [
+    {
+      "name": "حجز موعد",
+      "url": "/pages/appointment.html",
+      "description": "احجزي موعدك بسرعة"
+    },
+    {
+      "name": "واتساب",
+      "url": "https://wa.me/201033910907",
+      "description": "تواصلي عبر الواتساب"
+    }
+  ]
+}

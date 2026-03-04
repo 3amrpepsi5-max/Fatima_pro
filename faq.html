@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأسئلة الشائعة | عيادة د. فاطمة صلاح عاشور</title>
+  <meta name="description" content="إجابات على أكثر الأسئلة شيوعاً حول عيادة الدكتورة فاطمة وخدمات أمراض النساء والتوليد">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <style>
+    /* ── accordion ── */
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      margin-bottom: 16px;
+      transition: box-shadow 0.3s;
+    }
+    .faq-item.open { box-shadow: var(--shadow-md); }
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      cursor: pointer;
+      gap: 16px;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: var(--blush-soft); }
+    .faq-item.open .faq-question { background: var(--blush-soft); }
+    .faq-question h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .faq-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--blush);
+      color: var(--rose);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+      background: var(--rose);
+      color: white;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+    .faq-answer.open { max-height: 400px; }
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-brand">
+      <div class="nav-brand-icon"><i class="fas fa-heartbeat"></i></div>
+      <div class="nav-brand-text">
+        <span class="name">د. فاطمة صلاح عاشور</span>
+        <span class="title">أمراض النساء والتوليد</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+      <li><a href="about.html"><i class="fas fa-user-md"></i> عن الدكتورة</a></li>
+      <li><a href="services.html"><i class="fas fa-stethoscope"></i> الخدمات</a></li>
+      <li><a href="blog.html"><i class="fas fa-newspaper"></i> المقالات</a></li>
+      <li><a href="faq.html" class="active"><i class="fas fa-question-circle"></i> الأسئلة</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+      <li><a href="appointment.html" class="nav-cta"><i class="fas fa-calendar-plus"></i> احجزي موعدك</a></li>
+    </ul>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">الرئيسية</a>
+      <i class="fas fa-chevron-left" style="font-size:10px;"></i>
+      <span>الأسئلة الشائعة</span>
+    </div>
+    <h1>الأسئلة الشائعة</h1>
+    <p>إجابات واضحة لأكثر الأسئلة التي تترددين عليها</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="max-width:860px;">
+
+    <!-- فئة: العيادة والمواعيد -->
+    <div class="reveal">
+      <h2 style="font-size:1.2rem; color:var(--navy); margin-bottom:20px; display:flex; align-items:center; gap:10px; padding-bottom:12px; border-bottom:2px solid var(--blush);">
+        <i class="fas fa-calendar-alt" style="color:var(--rose);"></i> العيادة والمواعيد
+      </h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>ما هي مواعيد عمل العيادة؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            العيادة مفتوحة من السبت إلى الخميس من الساعة ٥:٠٠ مساءً حتى ١٠:٠٠ مساءً. الجمعة إجازة أسبوعية.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>كيف أحجز موعداً مع الدكتورة فاطمة؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            يمكنك حجز موعدك بعدة طرق: عبر الواتساب على الرقم 201033910907+، أو الاتصال المباشر على نفس الرقم، أو عبر نموذج الحجز الإلكتروني في <a href="appointment.html" style="color:var(--rose);">صفحة الحجز</a>. سيتم تأكيد موعدك خلال ساعتين من تقديم الطلب.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>هل تتوفر استشارات عبر الواتساب؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            نعم، تتوفر استشارات مبدئية عبر الواتساب. ومع ذلك، تُنصح بزيارة العيادة للحصول على تشخيص دقيق وفحص شامل. راسلينا على الواتساب وسنوضح لك الخيار الأنسب.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>أين تقع العيادة بالتحديد؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            العيادة تقع في جريس أبو قرقاص، محافظة المنيا، مصر. يمكنك الاتصال بنا للحصول على الاتجاهات الدقيقة، أو مراجعة <a href="contact.html" style="color:var(--rose);">صفحة اتصل بنا</a> للاطلاع على خريطة الموقع.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- فئة: الخدمات -->
+    <div class="reveal" style="margin-top:48px;">
+      <h2 style="font-size:1.2rem; color:var(--navy); margin-bottom:20px; display:flex; align-items:center; gap:10px; padding-bottom:12px; border-bottom:2px solid var(--blush);">
+        <i class="fas fa-stethoscope" style="color:var(--sage);"></i> الخدمات الطبية
+      </h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>ما هي أبرز خدمات العيادة؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            تقدم العيادة: متابعة الحمل (سونار 2D و3D)، علاج العقم، أمراض النساء العامة، الولادة الطبيعية والقيصرية، فحص ما قبل الزواج، تنظيم الأسرة، واضطرابات الهرمونات وسن اليأس. اطلعي على <a href="services.html" style="color:var(--rose);">صفحة الخدمات</a> للتفاصيل الكاملة.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>هل تتوفر خدمة الموجات فوق الصوتية (السونار) في العيادة؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            نعم، تتوفر أجهزة سونار حديثة (ثنائي وثلاثي الأبعاد) في العيادة لمتابعة الحمل وتشخيص الحالات النسائية المختلفة بدقة عالية.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>كم تستغرق جلسة متابعة الحمل؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            تستغرق جلسة متابعة الحمل الاعتيادية من ٢٠ إلى ٣٠ دقيقة، وتشمل الفحص السريري والسونار ومراجعة التحاليل. قد تطول الزيارة الأولى قليلاً لأخذ التاريخ الطبي كاملاً.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- فئة: الخصوصية والطمأنينة -->
+    <div class="reveal" style="margin-top:48px;">
+      <h2 style="font-size:1.2rem; color:var(--navy); margin-bottom:20px; display:flex; align-items:center; gap:10px; padding-bottom:12px; border-bottom:2px solid var(--blush);">
+        <i class="fas fa-shield-alt" style="color:var(--gold);"></i> الخصوصية والسرية
+      </h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>هل معلوماتي الطبية تبقى سرية؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            بالتأكيد. جميع المعلومات الطبية محفوظة بأعلى درجات السرية والخصوصية، ولا تُشارك مع أي طرف ثالث. السرية الطبية واجب أخلاقي ومهني لا تحيد عنه الدكتورة فاطمة.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4>هل يمكن للرجل (الزوج) الحضور معي؟</h4>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            نعم، يمكن للزوج الحضور في حالات متابعة الحمل أو استشارات العقم. ولكن يتوقف ذلك على رغبة المريضة وطبيعة الحالة. العيادة مُصمَّمة لتوفير أقصى قدر من الراحة والخصوصية.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- سؤال لم تجدي إجابته -->
+    <div class="reveal" style="margin-top:60px; background:linear-gradient(135deg, var(--blush-soft), var(--blush)); border-radius:var(--radius-lg); padding:40px; text-align:center;">
+      <i class="fas fa-question-circle" style="font-size:40px; color:var(--rose); margin-bottom:16px; display:block;"></i>
+      <h3 style="color:var(--navy); font-size:1.2rem; margin-bottom:10px;">لم تجدي إجابة سؤالك؟</h3>
+      <p style="color:var(--text-mid); font-size:14px; margin-bottom:24px;">تواصلي معنا مباشرةً وسنجيبك في أسرع وقت</p>
+      <a href="https://wa.me/201033910907?text=لدي%20سؤال%20عن%20العيادة" target="_blank" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> اسأليني الآن
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="padding:30px 0; text-align:center; border-bottom:1px solid rgba(255,255,255,0.08);">
+      <p style="color:rgba(255,255,255,0.5); font-size:14px;">عيادة الدكتورة فاطمة صلاح عاشور — جريس أبو قرقاص، المنيا</p>
+    </div>
+    <div class="footer-bottom"><span>© 2026 جميع الحقوق محفوظة.</span></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201033910907" class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="../js/main.js"></script>
+<script>
+  // ── accordion الأسئلة ──
+  const toggleFaq = (questionEl) => {
+    const item   = questionEl.closest('.faq-item');
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+
+    // إغلاق كل العناصر المفتوحة
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').classList.remove('open');
+    });
+
+    // فتح العنصر المحدد إذا لم يكن مفتوحاً
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.classList.add('open');
+    }
+  };
+</script>
+</body>
+</html>

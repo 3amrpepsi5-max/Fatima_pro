@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مقالات ونصائح طبية | عيادة د. فاطمة صلاح عاشور</title>
+  <meta name="description" content="مقالات ونصائح طبية متخصصة من الدكتورة فاطمة في صحة المرأة والحمل والتوليد">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-brand">
+      <div class="nav-brand-icon"><i class="fas fa-heartbeat"></i></div>
+      <div class="nav-brand-text">
+        <span class="name">د. فاطمة صلاح عاشور</span>
+        <span class="title">أمراض النساء والتوليد</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+      <li><a href="about.html"><i class="fas fa-user-md"></i> عن الدكتورة</a></li>
+      <li><a href="services.html"><i class="fas fa-stethoscope"></i> الخدمات</a></li>
+      <li><a href="blog.html" class="active"><i class="fas fa-newspaper"></i> المقالات</a></li>
+      <li><a href="faq.html"><i class="fas fa-question-circle"></i> الأسئلة</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+      <li><a href="appointment.html" class="nav-cta"><i class="fas fa-calendar-plus"></i> احجزي موعدك</a></li>
+    </ul>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">الرئيسية</a>
+      <i class="fas fa-chevron-left" style="font-size:10px;"></i>
+      <span>المقالات</span>
+    </div>
+    <h1>مقالات ونصائح طبية</h1>
+    <p>معلومات موثوقة من الدكتورة فاطمة لصحة المرأة</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- فلترة -->
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:48px; justify-content:center;" class="reveal">
+      <button onclick="filterArticles('all')" id="filter-all" class="btn btn-primary" style="font-size:13px; padding:10px 20px;">الكل</button>
+      <button onclick="filterArticles('pregnancy')" id="filter-pregnancy" class="btn btn-ghost" style="font-size:13px; padding:10px 20px;">الحمل</button>
+      <button onclick="filterArticles('gynecology')" id="filter-gynecology" class="btn btn-ghost" style="font-size:13px; padding:10px 20px;">أمراض النساء</button>
+      <button onclick="filterArticles('fertility')" id="filter-fertility" class="btn btn-ghost" style="font-size:13px; padding:10px 20px;">العقم</button>
+      <button onclick="filterArticles('health')" id="filter-health" class="btn btn-ghost" style="font-size:13px; padding:10px 20px;">الصحة العامة</button>
+    </div>
+
+    <!-- شبكة المقالات -->
+    <div id="articlesGrid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:28px;">
+
+      <article class="card shimmer-card reveal" data-category="pregnancy" style="overflow:hidden;" data-delay="1">
+        <div style="height:180px; background:linear-gradient(135deg, var(--blush), #f0c8bc); display:flex; align-items:center; justify-content:center; font-size:64px;">🤰</div>
+        <div style="padding:24px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+            <span style="background:var(--blush); color:var(--rose); padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700;">الحمل</span>
+            <span style="font-size:11px; color:var(--text-light);">يناير ٢٠٢٦</span>
+          </div>
+          <h3 style="font-size:1rem; color:var(--navy); margin-bottom:10px; line-height:1.5;">علامات الحمل الصحي في الثلث الأول</h3>
+          <p style="font-size:13px; color:var(--text-mid); line-height:1.8; margin-bottom:16px;">تعرفي على الأعراض الطبيعية التي تصاحب الأشهر الثلاثة الأولى من الحمل، وكيف تتعاملين معها بثقة...</p>
+          <a href="#" style="font-size:13px; color:var(--rose); font-weight:700; display:inline-flex; align-items:center; gap:6px;">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="card shimmer-card reveal" data-category="gynecology" style="overflow:hidden;" data-delay="2">
+        <div style="height:180px; background:linear-gradient(135deg, rgba(90,144,128,0.15), rgba(90,144,128,0.05)); display:flex; align-items:center; justify-content:center; font-size:64px;">🌸</div>
+        <div style="padding:24px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+            <span style="background:rgba(90,144,128,0.12); color:var(--sage); padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700;">أمراض النساء</span>
+            <span style="font-size:11px; color:var(--text-light);">فبراير ٢٠٢٦</span>
+          </div>
+          <h3 style="font-size:1rem; color:var(--navy); margin-bottom:10px; line-height:1.5;">كيف تتعاملين مع متلازمة تكيس المبايض؟</h3>
+          <p style="font-size:13px; color:var(--text-mid); line-height:1.8; margin-bottom:16px;">دليل شامل لفهم متلازمة تكيس المبايض وطرق العلاج والتعامل اليومي مع أعراضها...</p>
+          <a href="#" style="font-size:13px; color:var(--sage); font-weight:700; display:inline-flex; align-items:center; gap:6px;">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="card shimmer-card reveal" data-category="fertility" style="overflow:hidden;" data-delay="3">
+        <div style="height:180px; background:linear-gradient(135deg, rgba(196,162,101,0.15), rgba(196,162,101,0.05)); display:flex; align-items:center; justify-content:center; font-size:64px;">💗</div>
+        <div style="padding:24px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+            <span style="background:rgba(196,162,101,0.12); color:var(--gold); padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700;">العقم</span>
+            <span style="font-size:11px; color:var(--text-light);">فبراير ٢٠٢٦</span>
+          </div>
+          <h3 style="font-size:1rem; color:var(--navy); margin-bottom:10px; line-height:1.5;">١٠ نصائح لزيادة فرص الحمل الطبيعي</h3>
+          <p style="font-size:13px; color:var(--text-mid); line-height:1.8; margin-bottom:16px;">نصائح طبية موثوقة لتحسين فرص الحمل الطبيعي والاستعداد الجسدي والنفسي لرحلة الأمومة...</p>
+          <a href="#" style="font-size:13px; color:var(--gold); font-weight:700; display:inline-flex; align-items:center; gap:6px;">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="card shimmer-card reveal" data-category="health" style="overflow:hidden;" data-delay="4">
+        <div style="height:180px; background:linear-gradient(135deg, var(--blush), #fde8e0); display:flex; align-items:center; justify-content:center; font-size:64px;">🥗</div>
+        <div style="padding:24px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+            <span style="background:var(--blush); color:var(--rose); padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700;">الصحة العامة</span>
+            <span style="font-size:11px; color:var(--text-light);">مارس ٢٠٢٦</span>
+          </div>
+          <h3 style="font-size:1rem; color:var(--navy); margin-bottom:10px; line-height:1.5;">التغذية الصحيحة أثناء الحمل</h3>
+          <p style="font-size:13px; color:var(--text-mid); line-height:1.8; margin-bottom:16px;">ما يجب أن تأكليه وما تتجنبينه خلال فترة الحمل لضمان صحة الأم والجنين معاً...</p>
+          <a href="#" style="font-size:13px; color:var(--rose); font-weight:700; display:inline-flex; align-items:center; gap:6px;">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="card shimmer-card reveal" data-category="pregnancy" style="overflow:hidden;" data-delay="5">
+        <div style="height:180px; background:linear-gradient(135deg, rgba(90,144,128,0.15), rgba(90,144,128,0.05)); display:flex; align-items:center; justify-content:center; font-size:64px;">👶</div>
+        <div style="padding:24px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+            <span style="background:var(--blush); color:var(--rose); padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700;">الحمل</span>
+            <span style="font-size:11px; color:var(--text-light);">مارس ٢٠٢٦</span>
+          </div>
+          <h3 style="font-size:1rem; color:var(--navy); margin-bottom:10px; line-height:1.5;">الولادة الطبيعية أم القيصرية؟ كيف تختارين؟</h3>
+          <p style="font-size:13px; color:var(--text-mid); line-height:1.8; margin-bottom:16px;">شرح مفصل لمزايا وعيوب كل طريقة، والمعايير الطبية التي تحدد الخيار الأنسب لكِ...</p>
+          <a href="#" style="font-size:13px; color:var(--rose); font-weight:700; display:inline-flex; align-items:center; gap:6px;">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="card shimmer-card reveal" data-category="health" style="overflow:hidden;" data-delay="6">
+        <div style="height:180px; background:linear-gradient(135deg, rgba(196,162,101,0.15), rgba(196,162,101,0.05)); display:flex; align-items:center; justify-content:center; font-size:64px;">🧘‍♀️</div>
+        <div style="padding:24px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+            <span style="background:rgba(196,162,101,0.12); color:var(--gold); padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700;">الصحة العامة</span>
+            <span style="font-size:11px; color:var(--text-light);">أبريل ٢٠٢٦</span>
+          </div>
+          <h3 style="font-size:1rem; color:var(--navy); margin-bottom:10px; line-height:1.5;">كيف تتعاملين مع القلق في الحمل؟</h3>
+          <p style="font-size:13px; color:var(--text-mid); line-height:1.8; margin-bottom:16px;">نصائح عملية وطبية للتعامل مع القلق والتوتر الطبيعيين خلال فترة الحمل...</p>
+          <a href="#" style="font-size:13px; color:var(--gold); font-weight:700; display:inline-flex; align-items:center; gap:6px;">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- اشتركي في النشرة -->
+    <div class="reveal" style="margin-top:80px; background:linear-gradient(135deg, var(--navy), #1a3354); border-radius:var(--radius-lg); padding:50px; text-align:center;">
+      <div style="font-size:40px; margin-bottom:16px;">📬</div>
+      <h3 style="color:white; font-size:1.4rem; margin-bottom:12px;">احصلي على نصائحنا الطبية أولاً بأول</h3>
+      <p style="color:rgba(255,255,255,0.65); margin-bottom:28px; font-size:14px;">انضمي لمجموعة الواتساب الصحي للحصول على نصائح ومعلومات طبية موثوقة</p>
+      <a href="https://wa.me/201033910907?text=أريد%20الانضمام%20لمجموعة%20النصائح%20الصحية" target="_blank" class="btn btn-whatsapp" style="font-size:15px;">
+        <i class="fab fa-whatsapp"></i> انضمي للمجموعة الصحية
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="padding:30px 0; text-align:center; border-bottom:1px solid rgba(255,255,255,0.08);">
+      <p style="color:rgba(255,255,255,0.5); font-size:14px;">عيادة الدكتورة فاطمة صلاح عاشور — جريس أبو قرقاص، المنيا</p>
+    </div>
+    <div class="footer-bottom"><span>© 2026 جميع الحقوق محفوظة.</span></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201033910907" class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="../js/main.js"></script>
+<script>
+  // ── تصفية المقالات حسب الفئة ──
+  const filterArticles = (category) => {
+    const articles = document.querySelectorAll('#articlesGrid article');
+    const buttons  = document.querySelectorAll('[id^="filter-"]');
+    
+    // تحديث الأزرار
+    buttons.forEach(btn => {
+      btn.className = 'btn btn-ghost';
+      btn.style.fontSize = '13px';
+      btn.style.padding = '10px 20px';
+    });
+    const activeBtn = document.getElementById(`filter-${category}`);
+    if (activeBtn) {
+      activeBtn.className = 'btn btn-primary';
+      activeBtn.style.fontSize = '13px';
+      activeBtn.style.padding = '10px 20px';
+    }
+    
+    // إظهار/إخفاء المقالات
+    articles.forEach(article => {
+      const shouldShow = category === 'all' || article.dataset.category === category;
+      article.style.display = shouldShow ? '' : 'none';
+    });
+  };
+</script>
+</body>
+</html>

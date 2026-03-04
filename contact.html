@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا | عيادة د. فاطمة صلاح عاشور</title>
+  <meta name="description" content="تواصلي مع عيادة الدكتورة فاطمة صلاح عاشور في المنيا عبر الواتساب أو الاتصال المباشر">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <style>
+    .contact-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+    .contact-card .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 20px;
+    }
+    .form-input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid #f0e0d8;
+      border-radius: var(--radius-sm);
+      font-family: 'Cairo', sans-serif;
+      font-size: 14px;
+      color: var(--text-dark);
+      background: var(--blush-soft);
+      transition: border-color 0.3s;
+      outline: none;
+      direction: rtl;
+    }
+    .form-input:focus { border-color: var(--rose); background: white; }
+    textarea.form-input { resize: vertical; min-height: 120px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-brand">
+      <div class="nav-brand-icon"><i class="fas fa-heartbeat"></i></div>
+      <div class="nav-brand-text">
+        <span class="name">د. فاطمة صلاح عاشور</span>
+        <span class="title">أمراض النساء والتوليد</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+      <li><a href="about.html"><i class="fas fa-user-md"></i> عن الدكتورة</a></li>
+      <li><a href="services.html"><i class="fas fa-stethoscope"></i> الخدمات</a></li>
+      <li><a href="blog.html"><i class="fas fa-newspaper"></i> المقالات</a></li>
+      <li><a href="faq.html"><i class="fas fa-question-circle"></i> الأسئلة</a></li>
+      <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+      <li><a href="appointment.html" class="nav-cta"><i class="fas fa-calendar-plus"></i> احجزي موعدك</a></li>
+    </ul>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">الرئيسية</a>
+      <i class="fas fa-chevron-left" style="font-size:10px;"></i>
+      <span>اتصل بنا</span>
+    </div>
+    <h1>تواصلي معنا</h1>
+    <p>نحن هنا للإجابة على استفساراتك في أي وقت</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- بطاقات التواصل الرئيسية -->
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-bottom:80px;">
+
+      <div class="contact-card reveal" data-delay="1" onclick="window.open('https://wa.me/201033910907?text=مرحباً','_blank')">
+        <div class="icon" style="background:rgba(37,211,102,0.12); color:#25D366;">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <h3 style="font-size:1rem; color:var(--navy); margin-bottom:8px;">واتساب</h3>
+        <p style="font-size:14px; color:var(--text-mid); margin-bottom:16px;">تواصلي مباشرةً عبر الواتساب لحجز موعد أو استفسار</p>
+        <span style="font-size:15px; font-weight:700; color:#25D366;">+201033910907</span>
+      </div>
+
+      <div class="contact-card reveal" data-delay="2" onclick="window.location.href='tel:+201033910907'">
+        <div class="icon" style="background:var(--blush); color:var(--rose);">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h3 style="font-size:1rem; color:var(--navy); margin-bottom:8px;">اتصال هاتفي</h3>
+        <p style="font-size:14px; color:var(--text-mid); margin-bottom:16px;">اتصلي بنا مباشرةً خلال ساعات العمل</p>
+        <span style="font-size:15px; font-weight:700; color:var(--rose);">+201033910907</span>
+      </div>
+
+      <div class="contact-card reveal" data-delay="3">
+        <div class="icon" style="background:rgba(90,144,128,0.12); color:var(--sage);">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3 style="font-size:1rem; color:var(--navy); margin-bottom:8px;">الموقع</h3>
+        <p style="font-size:14px; color:var(--text-mid); margin-bottom:16px;">زوري العيادة شخصياً في الوقت المناسب لك</p>
+        <span style="font-size:14px; font-weight:700; color:var(--sage);">جريس أبو قرقاص، المنيا</span>
+      </div>
+
+    </div>
+
+    <!-- الشبكة الثنائية -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;">
+
+      <!-- نموذج الرسالة -->
+      <div class="card reveal-right" style="padding:40px;">
+        <h3 style="font-size:1.2rem; color:var(--navy); margin-bottom:8px;">أرسلي رسالة</h3>
+        <p style="font-size:13px; color:var(--text-light); margin-bottom:28px;">سيتم الرد خلال ٢٤ ساعة عبر الواتساب</p>
+
+        <form id="contactForm" style="display:flex; flex-direction:column; gap:18px;">
+          <div>
+            <label style="font-size:13px; font-weight:700; color:var(--text-mid); margin-bottom:6px; display:block;">الاسم</label>
+            <input type="text" id="cName" class="form-input" placeholder="اسمك الكريم">
+          </div>
+          <div>
+            <label style="font-size:13px; font-weight:700; color:var(--text-mid); margin-bottom:6px; display:block;">رقم الهاتف</label>
+            <input type="tel" id="cPhone" class="form-input" placeholder="01xxxxxxxxx">
+          </div>
+          <div>
+            <label style="font-size:13px; font-weight:700; color:var(--text-mid); margin-bottom:6px; display:block;">موضوع الرسالة</label>
+            <select id="cSubject" class="form-input">
+              <option value="">اختاري</option>
+              <option>استفسار عن خدمة</option>
+              <option>حجز موعد</option>
+              <option>استشارة طبية</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size:13px; font-weight:700; color:var(--text-mid); margin-bottom:6px; display:block;">رسالتك</label>
+            <textarea id="cMessage" class="form-input" placeholder="اكتبي رسالتك هنا..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-whatsapp" style="justify-content:center;">
+            <i class="fab fa-whatsapp"></i> أرسلي عبر الواتساب
+          </button>
+        </form>
+      </div>
+
+      <!-- الخريطة والمعلومات -->
+      <div class="reveal-left">
+        <!-- مواعيد العمل -->
+        <div class="card" style="padding:28px; margin-bottom:24px;">
+          <h4 style="font-size:1rem; color:var(--navy); margin-bottom:20px; display:flex; align-items:center; gap:10px;">
+            <i class="fas fa-clock" style="color:var(--rose);"></i> مواعيد العمل
+          </h4>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--blush);">
+              <span style="font-size:14px; color:var(--navy); font-weight:600;">السبت – الخميس</span>
+              <span style="font-size:14px; color:var(--sage); font-weight:700;">٥:٠٠م – ١٠:٠٠م</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0;">
+              <span style="font-size:14px; color:var(--navy); font-weight:600;">الجمعة</span>
+              <span style="font-size:14px; color:var(--rose); font-weight:700;">إجازة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- الخريطة -->
+        <div class="card" style="overflow:hidden; padding:0;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.456789012345!2d30.836789015!3d27.930430982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x144f8a1b2c3d4e5f%3A0xabcdef1234567890!2sAbu%20Qurqas!5e0!3m2!1sar!2seg!4v1678901234567"
+            width="100%" height="280" style="border:0; display:block;" allowfullscreen loading="lazy"
+            title="موقع العيادة">
+          </iframe>
+          <div style="padding:16px 20px; background:var(--blush-soft);">
+            <div style="display:flex; gap:10px; align-items:center;">
+              <i class="fas fa-map-marker-alt" style="color:var(--rose);"></i>
+              <span style="font-size:14px; color:var(--text-mid);">جريس أبو قرقاص، المنيا، مصر</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- وسائل التواصل الاجتماعي -->
+        <div style="margin-top:24px; padding:24px; background:white; border-radius:var(--radius-md); box-shadow:var(--shadow-sm);">
+          <h4 style="font-size:14px; color:var(--text-mid); margin-bottom:16px;">تابعينا على</h4>
+          <div style="display:flex; gap:12px;">
+            <a href="https://wa.me/201033910907" target="_blank"
+               style="flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px; background:rgba(37,211,102,0.1); border-radius:var(--radius-sm); color:#25D366; font-size:13px; font-weight:700;">
+              <i class="fab fa-whatsapp"></i> واتساب
+            </a>
+            <a href="#"
+               style="flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px; background:rgba(24,119,242,0.1); border-radius:var(--radius-sm); color:#1877f2; font-size:13px; font-weight:700;">
+              <i class="fab fa-facebook-f"></i> فيسبوك
+            </a>
+            <a href="#"
+               style="flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px; background:rgba(225,48,108,0.1); border-radius:var(--radius-sm); color:#e1306c; font-size:13px; font-weight:700;">
+              <i class="fab fa-instagram"></i> انستغرام
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="padding:30px 0; text-align:center; border-bottom:1px solid rgba(255,255,255,0.08);">
+      <p style="color:rgba(255,255,255,0.5); font-size:14px;">عيادة الدكتورة فاطمة صلاح عاشور — جريس أبو قرقاص، المنيا</p>
+    </div>
+    <div class="footer-bottom"><span>© 2026 جميع الحقوق محفوظة.</span></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201033910907" class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="../js/main.js"></script>
+<script>
+  // ── نموذج التواصل ──
+  document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name    = document.getElementById('cName').value.trim();
+    const phone   = document.getElementById('cPhone').value.trim();
+    const subject = document.getElementById('cSubject').value;
+    const message = document.getElementById('cMessage').value.trim();
+
+    if (!message) {
+      window.DrFatima?.showToast({ title: 'تنبيه', message: 'يرجى كتابة رسالتك أولاً', type: 'error' });
+      return;
+    }
+
+    const wa = `مرحباً دكتورة فاطمة 🌸\nالاسم: ${name || 'لم يُذكر'}\nالهاتف: ${phone || 'لم يُذكر'}\nالموضوع: ${subject || 'استفسار عام'}\n\n${message}`;
+    window.open(`https://wa.me/201033910907?text=${encodeURIComponent(wa)}`, '_blank');
+    e.target.reset();
+    window.DrFatima?.showToast({ title: 'تم الإرسال', message: 'سيتم فتح الواتساب لإكمال إرسال رسالتك', type: 'success' });
+  });
+</script>
+</body>
+</html>
